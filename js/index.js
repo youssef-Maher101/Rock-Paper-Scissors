@@ -161,7 +161,8 @@ let btnReset = document.querySelector(".reset");
 btnReset.addEventListener("click", function () {
     playerChoice.innerText = "❔";
     computerChoice.innerText = "❔";
-
+    playerScoreNum=0;
+    computerScoreNum=0;
     playerScore.innerText = 0;
     computerScore.innerText = 0;
 
