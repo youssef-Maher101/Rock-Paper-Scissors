@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #311b92, #0b061d 70%);
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 25px;
+  background: #141129;
+  border: 1px solid #4b3a89;
+  box-shadow: 0 0 50px rgba(128, 0, 255, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 45px;
+  margin-bottom: 40px;
+  background: linear-gradient(
+    90deg,
+    rgb(32, 32, 208),
+    rgb(99, 99, 244),
+    rgb(183, 30, 222)
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.box {
+  width: 170px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #1c1738;
+  border: 2px solid #2962ff;
+}
+
+.enemy {
+  border-color: #ff1744;
+}
+
+.box h3 {
+  margin-bottom: 10px;
+}
+
+.box span {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.vs {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.battle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin: 40px 0;
+}
+
+.card {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
+  background: #1d173c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  border: 2px solid #673ab7;
+}
+
+.middle {
+  font-size: 55px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.buttons button {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 25px;
+  background: #1b1738;
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons button span {
+  font-size: 20px;
+}
+
+.buttons button:hover {
+  transform: translateY(-10px);
+}
+
+.rock {
+  border: 2px solid gold;
+}
+
+.rock:hover {
+  box-shadow: 0 0 30px gold;
+}
+
+.paper {
+  border: 2px solid #29b6f6;
+}
+
+.paper:hover {
+  box-shadow: 0 0 30px #29b6f6;
+}
+
+.scissors {
+  border: 2px solid #ab47ff;
+}
+
+.scissors:hover {
+  box-shadow: 0 0 30px #ab47ff;
+}
+
+.result {
+  position: absolute;
+  width: 130px;
+  height: 80px;
+  left: calc(50% - 65px);
+  top: 240px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  display: none;
+  border: 3px solid;
+}
+
+.reset {
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 15px;
+  background: #7538148f;
+  color: #dc5100;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+
+  .score {
+    gap: 30px;
+  }
+
+  .box {
+    width: 130px;
+    padding: 15px;
+  }
+
+  .box span {
+    font-size: 30px;
+  }
+
+  .vs {
+    font-size: 25px;
+  }
+
+  .battle {
+    gap: 20px;
+  }
+
+  .card {
+    width: 130px;
+    height: 130px;
+    font-size: 55px;
+  }
+
+  .middle {
+    font-size: 35px;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  .buttons button {
+    width: 110px;
+    height: 110px;
+    font-size: 40px;
+  }
+
+  .buttons button span {
+    font-size: 16px;
+  }
+
+  .result {
+    width: 95px;
+    height: 50px;
+    left: calc(50% - 47.5px);
+    top: 225px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .reset {
+    position: static;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .score {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .box {
+    width: 100px;
+    padding: 10px;
+  }
+
+  .box h3 {
+    font-size: 14px;
+  }
+
+  .box span {
+    font-size: 24px;
+  }
+
+  .vs {
+    font-size: 20px;
+  }
+
+  .battle {
+    gap: 10px;
+    margin: 25px 0;
+  }
+
+  .card {
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+    border-radius: 15px;
+  }
+
+  .middle {
+    font-size: 25px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 85px;
+    height: 85px;
+    font-size: 32px;
+    border-radius: 15px;
+  }
+
+  .buttons button span {
+    font-size: 12px;
+  }
+
+  .result {
+    width: 70px;
+    height: 40px;
+    left: calc(50% - 35px);
+    top: 190px;
+    font-size: 15px;
+  }
+}
