@@ -327,6 +327,7 @@ h1 {
     height: 25px;
     left: calc(50% - 27px);
     top: 200px;
-    font-size: 15px;
+    font-size: 12px;
+        padding: 11px 24px;
   }
 }
