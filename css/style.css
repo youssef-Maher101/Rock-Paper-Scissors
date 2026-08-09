@@ -323,10 +323,10 @@ h1 {
   }
 
   .result {
-    width: 70px;
-    height: 40px;
-    left: calc(50% - 35px);
-    top: 190px;
+    width: 55px;
+    height: 25px;
+    left: calc(50% - 27px);
+    top: 200px;
     font-size: 15px;
   }
 }
